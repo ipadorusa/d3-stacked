@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>npm-package</title>
+    <style>
+        .wrap_bar_1 .stack_bar{fill:#658af0}
+        .wrap_bar_2 .stack_bar{fill:#ccc}
+        .wrap_bar_3 .stack_bar{fill:#dd0000}
+        .stacked_chart_tooltip{position:absolute;top:0;left:0;padding:10px;color:#fff;font-size:13px;border-radius:3px;background:rgba(65, 70, 76, 0.8);}
+        .stacked_chart .stack_bar {cursor:pointer}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="container">
+        <div class="columns">
+            <div class="column col-12" style="height:500px">
+                <div class="wrap_chart chart08"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./dist/app.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let stackedData = [
+            [
+                {"lable": "앱1", "success":1100, "fail":6040},
+                {"lable": "앱2", "success":5600, "fail":3500},
+                {"lable": "앱3", "success":10000, "fail":9000},
+                {"lable": "앱4", "success":1100, "fail":6040},
+                {"lable": "앱5", "success":1500, "fail":3500},
+                {"lable": "앱6", "success":103, "fail":7000},
+                {"lable": "앱7", "success":103, "fail":103},
+                {"lable": "앱8", "success":6040, "fail":100},
+                {"lable": "앱9", "success":100, "fail":6040},
+                {"lable": "앱10", "success":10, "fail":3500}
+            ],
+            [
+                "success", "fail"
+            ]
+
+        ];
+
+        new UI.StackedBarChart('.chart08', {}, stackedData);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.wrap_bar_1 .stack_bar{fill:#658af0}
+.wrap_bar_2 .stack_bar{fill:#ccc}
+.wrap_bar_3 .stack_bar{fill:#dd0000}
+.stacked_chart_tooltip{position:absolute;top:0;left:0;padding:10px;color:#fff;font-size:13px;border-radius:3px;background:rgba(65, 70, 76, 0.8);}
+.stacked_chart .stack_bar {cursor:pointer}
